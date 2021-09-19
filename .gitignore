@@ -1,4 +1,5 @@
-ACAN.X/debug
-ACAN.X/nbproject
-ACAN.X/build
-ACAN.X/dist
+ACAN.X/build/
+ACAN.X/dist/
+ACAN.X/nbproject/private/
+ACAN.X/nbproject/Makefile-*
+ACAN.X/nbproject/Package-*
