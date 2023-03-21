@@ -15,4 +15,5 @@ The CAN message give the output of each channel. 4 16-bit unsigned integers are 
 - Byte 5 - Channel 3 Reading HI Byte
 - Byte 6 - Channel 4 Reading LO Byte
 - Byte 7 - Channel 4 Reading HI Byte
+
 The ID of the CAN message indicates the contents and interpretation of the message. The ID is configured in the global_constants.h header.
