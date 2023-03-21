@@ -290,6 +290,11 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="5.0"/>
       </ICD3PlatformTool>
+      <ICD4Tool>
+        <property key="memories.programmemory.ranges" value="0-2ab7f"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/Cole/Zips Racing Electric/Gitlab/ACAN23/ACAN.X/debug/default/ACAN_ptg"/>
+      </ICD4Tool>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>

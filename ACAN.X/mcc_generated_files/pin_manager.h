@@ -73,11 +73,11 @@
   @Example
     <code>
     // Set RA11 high (1)
-    BRK_F_SetHigh();
+    SENSOR3_SetHigh();
     </code>
 
 */
-#define BRK_F_SetHigh()          _LATA11 = 1
+#define SENSOR3_SetHigh()          _LATA11 = 1
 /**
   @Summary
     Sets the GPIO pin, RA11, low using LATA11.
@@ -97,11 +97,11 @@
   @Example
     <code>
     // Set RA11 low (0)
-    BRK_F_SetLow();
+    SENSOR3_SetLow();
     </code>
 
 */
-#define BRK_F_SetLow()           _LATA11 = 0
+#define SENSOR3_SetLow()           _LATA11 = 0
 /**
   @Summary
     Toggles the GPIO pin, RA11, using LATA11.
@@ -121,11 +121,11 @@
   @Example
     <code>
     // Toggle RA11
-    BRK_F_Toggle();
+    SENSOR3_Toggle();
     </code>
 
 */
-#define BRK_F_Toggle()           _LATA11 ^= 1
+#define SENSOR3_Toggle()           _LATA11 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RA11.
@@ -147,11 +147,11 @@
     uint16_t portValue;
 
     // Read RA11
-    postValue = BRK_F_GetValue();
+    postValue = SENSOR3_GetValue();
     </code>
 
 */
-#define BRK_F_GetValue()         _RA11
+#define SENSOR3_GetValue()         _RA11
 /**
   @Summary
     Configures the GPIO pin, RA11, as an input.
@@ -171,11 +171,11 @@
   @Example
     <code>
     // Sets the RA11 as an input
-    BRK_F_SetDigitalInput();
+    SENSOR3_SetDigitalInput();
     </code>
 
 */
-#define BRK_F_SetDigitalInput()  _TRISA11 = 1
+#define SENSOR3_SetDigitalInput()  _TRISA11 = 1
 /**
   @Summary
     Configures the GPIO pin, RA11, as an output.
@@ -195,11 +195,11 @@
   @Example
     <code>
     // Sets the RA11 as an output
-    BRK_F_SetDigitalOutput();
+    SENSOR3_SetDigitalOutput();
     </code>
 
 */
-#define BRK_F_SetDigitalOutput() _TRISA11 = 0
+#define SENSOR3_SetDigitalOutput() _TRISA11 = 0
 /**
   @Summary
     Sets the GPIO pin, RA12, high using LATA12.
@@ -219,11 +219,11 @@
   @Example
     <code>
     // Set RA12 high (1)
-    BRK_R_SetHigh();
+    SENSOR4_SetHigh();
     </code>
 
 */
-#define BRK_R_SetHigh()          _LATA12 = 1
+#define SENSOR4_SetHigh()          _LATA12 = 1
 /**
   @Summary
     Sets the GPIO pin, RA12, low using LATA12.
@@ -243,11 +243,11 @@
   @Example
     <code>
     // Set RA12 low (0)
-    BRK_R_SetLow();
+    SENSOR4_SetLow();
     </code>
 
 */
-#define BRK_R_SetLow()           _LATA12 = 0
+#define SENSOR4_SetLow()           _LATA12 = 0
 /**
   @Summary
     Toggles the GPIO pin, RA12, using LATA12.
@@ -267,11 +267,11 @@
   @Example
     <code>
     // Toggle RA12
-    BRK_R_Toggle();
+    SENSOR4_Toggle();
     </code>
 
 */
-#define BRK_R_Toggle()           _LATA12 ^= 1
+#define SENSOR4_Toggle()           _LATA12 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RA12.
@@ -293,11 +293,11 @@
     uint16_t portValue;
 
     // Read RA12
-    postValue = BRK_R_GetValue();
+    postValue = SENSOR4_GetValue();
     </code>
 
 */
-#define BRK_R_GetValue()         _RA12
+#define SENSOR4_GetValue()         _RA12
 /**
   @Summary
     Configures the GPIO pin, RA12, as an input.
@@ -317,11 +317,11 @@
   @Example
     <code>
     // Sets the RA12 as an input
-    BRK_R_SetDigitalInput();
+    SENSOR4_SetDigitalInput();
     </code>
 
 */
-#define BRK_R_SetDigitalInput()  _TRISA12 = 1
+#define SENSOR4_SetDigitalInput()  _TRISA12 = 1
 /**
   @Summary
     Configures the GPIO pin, RA12, as an output.
@@ -341,11 +341,11 @@
   @Example
     <code>
     // Sets the RA12 as an output
-    BRK_R_SetDigitalOutput();
+    SENSOR4_SetDigitalOutput();
     </code>
 
 */
-#define BRK_R_SetDigitalOutput() _TRISA12 = 0
+#define SENSOR4_SetDigitalOutput() _TRISA12 = 0
 /**
   @Summary
     Sets the GPIO pin, RB13, high using LATB13.
@@ -511,11 +511,11 @@
   @Example
     <code>
     // Set RB8 high (1)
-    APPS1_SetHigh();
+    SENSOR1_SetHigh();
     </code>
 
 */
-#define APPS1_SetHigh()          _LATB8 = 1
+#define SENSOR1_SetHigh()          _LATB8 = 1
 /**
   @Summary
     Sets the GPIO pin, RB8, low using LATB8.
@@ -535,11 +535,11 @@
   @Example
     <code>
     // Set RB8 low (0)
-    APPS1_SetLow();
+    SENSOR1_SetLow();
     </code>
 
 */
-#define APPS1_SetLow()           _LATB8 = 0
+#define SENSOR1_SetLow()           _LATB8 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB8, using LATB8.
@@ -559,11 +559,11 @@
   @Example
     <code>
     // Toggle RB8
-    APPS1_Toggle();
+    SENSOR1_Toggle();
     </code>
 
 */
-#define APPS1_Toggle()           _LATB8 ^= 1
+#define SENSOR1_Toggle()           _LATB8 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB8.
@@ -585,11 +585,11 @@
     uint16_t portValue;
 
     // Read RB8
-    postValue = APPS1_GetValue();
+    postValue = SENSOR1_GetValue();
     </code>
 
 */
-#define APPS1_GetValue()         _RB8
+#define SENSOR1_GetValue()         _RB8
 /**
   @Summary
     Configures the GPIO pin, RB8, as an input.
@@ -609,11 +609,11 @@
   @Example
     <code>
     // Sets the RB8 as an input
-    APPS1_SetDigitalInput();
+    SENSOR1_SetDigitalInput();
     </code>
 
 */
-#define APPS1_SetDigitalInput()  _TRISB8 = 1
+#define SENSOR1_SetDigitalInput()  _TRISB8 = 1
 /**
   @Summary
     Configures the GPIO pin, RB8, as an output.
@@ -633,11 +633,11 @@
   @Example
     <code>
     // Sets the RB8 as an output
-    APPS1_SetDigitalOutput();
+    SENSOR1_SetDigitalOutput();
     </code>
 
 */
-#define APPS1_SetDigitalOutput() _TRISB8 = 0
+#define SENSOR1_SetDigitalOutput() _TRISB8 = 0
 /**
   @Summary
     Sets the GPIO pin, RC5, high using LATC5.
@@ -657,11 +657,11 @@
   @Example
     <code>
     // Set RC5 high (1)
-    APPS2_SetHigh();
+    SENSOR2_SetHigh();
     </code>
 
 */
-#define APPS2_SetHigh()          _LATC5 = 1
+#define SENSOR2_SetHigh()          _LATC5 = 1
 /**
   @Summary
     Sets the GPIO pin, RC5, low using LATC5.
@@ -681,11 +681,11 @@
   @Example
     <code>
     // Set RC5 low (0)
-    APPS2_SetLow();
+    SENSOR2_SetLow();
     </code>
 
 */
-#define APPS2_SetLow()           _LATC5 = 0
+#define SENSOR2_SetLow()           _LATC5 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC5, using LATC5.
@@ -705,11 +705,11 @@
   @Example
     <code>
     // Toggle RC5
-    APPS2_Toggle();
+    SENSOR2_Toggle();
     </code>
 
 */
-#define APPS2_Toggle()           _LATC5 ^= 1
+#define SENSOR2_Toggle()           _LATC5 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC5.
@@ -731,11 +731,11 @@
     uint16_t portValue;
 
     // Read RC5
-    postValue = APPS2_GetValue();
+    postValue = SENSOR2_GetValue();
     </code>
 
 */
-#define APPS2_GetValue()         _RC5
+#define SENSOR2_GetValue()         _RC5
 /**
   @Summary
     Configures the GPIO pin, RC5, as an input.
@@ -755,11 +755,11 @@
   @Example
     <code>
     // Sets the RC5 as an input
-    APPS2_SetDigitalInput();
+    SENSOR2_SetDigitalInput();
     </code>
 
 */
-#define APPS2_SetDigitalInput()  _TRISC5 = 1
+#define SENSOR2_SetDigitalInput()  _TRISC5 = 1
 /**
   @Summary
     Configures the GPIO pin, RC5, as an output.
@@ -779,11 +779,11 @@
   @Example
     <code>
     // Sets the RC5 as an output
-    APPS2_SetDigitalOutput();
+    SENSOR2_SetDigitalOutput();
     </code>
 
 */
-#define APPS2_SetDigitalOutput() _TRISC5 = 0
+#define SENSOR2_SetDigitalOutput() _TRISC5 = 0
 /**
   @Summary
     Sets the GPIO pin, RC6, high using LATC6.
@@ -803,11 +803,11 @@
   @Example
     <code>
     // Set RC6 high (1)
-    D5_SetHigh();
+    CAN_LED_D5_SetHigh();
     </code>
 
 */
-#define D5_SetHigh()          _LATC6 = 1
+#define CAN_LED_D5_SetHigh()          _LATC6 = 1
 /**
   @Summary
     Sets the GPIO pin, RC6, low using LATC6.
@@ -827,11 +827,11 @@
   @Example
     <code>
     // Set RC6 low (0)
-    D5_SetLow();
+    CAN_LED_D5_SetLow();
     </code>
 
 */
-#define D5_SetLow()           _LATC6 = 0
+#define CAN_LED_D5_SetLow()           _LATC6 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC6, using LATC6.
@@ -851,11 +851,11 @@
   @Example
     <code>
     // Toggle RC6
-    D5_Toggle();
+    CAN_LED_D5_Toggle();
     </code>
 
 */
-#define D5_Toggle()           _LATC6 ^= 1
+#define CAN_LED_D5_Toggle()           _LATC6 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC6.
@@ -877,11 +877,11 @@
     uint16_t portValue;
 
     // Read RC6
-    postValue = D5_GetValue();
+    postValue = CAN_LED_D5_GetValue();
     </code>
 
 */
-#define D5_GetValue()         _RC6
+#define CAN_LED_D5_GetValue()         _RC6
 /**
   @Summary
     Configures the GPIO pin, RC6, as an input.
@@ -901,11 +901,11 @@
   @Example
     <code>
     // Sets the RC6 as an input
-    D5_SetDigitalInput();
+    CAN_LED_D5_SetDigitalInput();
     </code>
 
 */
-#define D5_SetDigitalInput()  _TRISC6 = 1
+#define CAN_LED_D5_SetDigitalInput()  _TRISC6 = 1
 /**
   @Summary
     Configures the GPIO pin, RC6, as an output.
@@ -925,11 +925,11 @@
   @Example
     <code>
     // Sets the RC6 as an output
-    D5_SetDigitalOutput();
+    CAN_LED_D5_SetDigitalOutput();
     </code>
 
 */
-#define D5_SetDigitalOutput() _TRISC6 = 0
+#define CAN_LED_D5_SetDigitalOutput() _TRISC6 = 0
 /**
   @Summary
     Sets the GPIO pin, RC7, high using LATC7.
@@ -949,11 +949,11 @@
   @Example
     <code>
     // Set RC7 high (1)
-    D6_SetHigh();
+    ADC_LED_D6_SetHigh();
     </code>
 
 */
-#define D6_SetHigh()          _LATC7 = 1
+#define ADC_LED_D6_SetHigh()          _LATC7 = 1
 /**
   @Summary
     Sets the GPIO pin, RC7, low using LATC7.
@@ -973,11 +973,11 @@
   @Example
     <code>
     // Set RC7 low (0)
-    D6_SetLow();
+    ADC_LED_D6_SetLow();
     </code>
 
 */
-#define D6_SetLow()           _LATC7 = 0
+#define ADC_LED_D6_SetLow()           _LATC7 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC7, using LATC7.
@@ -997,11 +997,11 @@
   @Example
     <code>
     // Toggle RC7
-    D6_Toggle();
+    ADC_LED_D6_Toggle();
     </code>
 
 */
-#define D6_Toggle()           _LATC7 ^= 1
+#define ADC_LED_D6_Toggle()           _LATC7 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC7.
@@ -1023,11 +1023,11 @@
     uint16_t portValue;
 
     // Read RC7
-    postValue = D6_GetValue();
+    postValue = ADC_LED_D6_GetValue();
     </code>
 
 */
-#define D6_GetValue()         _RC7
+#define ADC_LED_D6_GetValue()         _RC7
 /**
   @Summary
     Configures the GPIO pin, RC7, as an input.
@@ -1047,11 +1047,11 @@
   @Example
     <code>
     // Sets the RC7 as an input
-    D6_SetDigitalInput();
+    ADC_LED_D6_SetDigitalInput();
     </code>
 
 */
-#define D6_SetDigitalInput()  _TRISC7 = 1
+#define ADC_LED_D6_SetDigitalInput()  _TRISC7 = 1
 /**
   @Summary
     Configures the GPIO pin, RC7, as an output.
@@ -1071,11 +1071,11 @@
   @Example
     <code>
     // Sets the RC7 as an output
-    D6_SetDigitalOutput();
+    ADC_LED_D6_SetDigitalOutput();
     </code>
 
 */
-#define D6_SetDigitalOutput() _TRISC7 = 0
+#define ADC_LED_D6_SetDigitalOutput() _TRISC7 = 0
 /**
   @Summary
     Sets the GPIO pin, RC8, high using LATC8.
@@ -1095,11 +1095,11 @@
   @Example
     <code>
     // Set RC8 high (1)
-    D7_SetHigh();
+    HEARTBEAT_LED_D7_SetHigh();
     </code>
 
 */
-#define D7_SetHigh()          _LATC8 = 1
+#define HEARTBEAT_LED_D7_SetHigh()          _LATC8 = 1
 /**
   @Summary
     Sets the GPIO pin, RC8, low using LATC8.
@@ -1119,11 +1119,11 @@
   @Example
     <code>
     // Set RC8 low (0)
-    D7_SetLow();
+    HEARTBEAT_LED_D7_SetLow();
     </code>
 
 */
-#define D7_SetLow()           _LATC8 = 0
+#define HEARTBEAT_LED_D7_SetLow()           _LATC8 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC8, using LATC8.
@@ -1143,11 +1143,11 @@
   @Example
     <code>
     // Toggle RC8
-    D7_Toggle();
+    HEARTBEAT_LED_D7_Toggle();
     </code>
 
 */
-#define D7_Toggle()           _LATC8 ^= 1
+#define HEARTBEAT_LED_D7_Toggle()           _LATC8 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC8.
@@ -1169,11 +1169,11 @@
     uint16_t portValue;
 
     // Read RC8
-    postValue = D7_GetValue();
+    postValue = HEARTBEAT_LED_D7_GetValue();
     </code>
 
 */
-#define D7_GetValue()         _RC8
+#define HEARTBEAT_LED_D7_GetValue()         _RC8
 /**
   @Summary
     Configures the GPIO pin, RC8, as an input.
@@ -1193,11 +1193,11 @@
   @Example
     <code>
     // Sets the RC8 as an input
-    D7_SetDigitalInput();
+    HEARTBEAT_LED_D7_SetDigitalInput();
     </code>
 
 */
-#define D7_SetDigitalInput()  _TRISC8 = 1
+#define HEARTBEAT_LED_D7_SetDigitalInput()  _TRISC8 = 1
 /**
   @Summary
     Configures the GPIO pin, RC8, as an output.
@@ -1217,11 +1217,11 @@
   @Example
     <code>
     // Sets the RC8 as an output
-    D7_SetDigitalOutput();
+    HEARTBEAT_LED_D7_SetDigitalOutput();
     </code>
 
 */
-#define D7_SetDigitalOutput() _TRISC8 = 0
+#define HEARTBEAT_LED_D7_SetDigitalOutput() _TRISC8 = 0
 /**
   @Summary
     Sets the GPIO pin, RC9, high using LATC9.

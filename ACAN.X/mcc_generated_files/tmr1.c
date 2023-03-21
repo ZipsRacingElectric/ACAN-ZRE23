@@ -92,8 +92,8 @@ void TMR1_Initialize (void)
 {
     //TMR1 0; 
     TMR1 = 0x00;
-    //Period = 0.02 s; Frequency = 40000000 Hz; PR1 12499; 
-    PR1 = 0x30D3;
+    //Period = 0.0000032 s; Frequency = 40000000 Hz; PR1 1; 
+    PR1 = 0x01;
     //TCKPS 1:64; TON enabled; TSIDL disabled; TCS FOSC/2; TSYNC disabled; TGATE disabled; 
     T1CON = 0x8020;
 
@@ -110,7 +110,25 @@ void TMR1_Initialize (void)
 }
 
 
+void __attribute__ ( ( interrupt, no_auto_psv ) ) _T1Interrupt (  )
+{
+    /* Check if the Timer Interrupt/Status is set */
 
+    //***User Area Begin
+
+    // ticker function call;
+    // ticker is 1 -> Callback function gets called everytime this ISR executes
+    if(TMR1_InterruptHandler) 
+    { 
+           TMR1_InterruptHandler(); 
+    }
+
+    //***User Area End
+
+    tmr1_obj.count++;
+    tmr1_obj.timerElapsed = true;
+    IFS0bits.T1IF = false;
+}
 
 void TMR1_Period16BitSet( uint16_t value )
 {
