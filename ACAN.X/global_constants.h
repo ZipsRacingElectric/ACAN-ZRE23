@@ -9,7 +9,10 @@ extern "C" {
 
 #define FREQUENCY     0                  // Scans for PWM Frequency from Channels
 #define ANALOG        1                  // Reads Analog Values from Channels
-#define SCANNING_MODE FREQUENCY          // Scanning Mode (Select from options below)
+#define SENSOR1_MODE FREQUENCY           // Sensor-1 Scanning Mode (Select from options above)
+#define SENSOR2_MODE FREQUENCY           // Sensor-2 Scanning Mode
+#define SENSOR3_MODE FREQUENCY           // Sensor-3 Scanning Mode
+#define SENSOR4_MODE FREQUENCY           // Sensor-4 Scanning Mode
 
 #define CAN_ID 0x755                     // Sensor Result CAN Message ID
  

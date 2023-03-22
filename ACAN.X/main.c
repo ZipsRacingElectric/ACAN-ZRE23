@@ -96,20 +96,38 @@ void interrupt_service()
     ADC_LED_D6_Toggle();
     
     // PWM Frequency Scanning
-    if(SCANNING_MODE == FREQUENCY)
+    if(SENSOR1_MODE == FREQUENCY)
     {
         scan_sensor_frequency(ADC1_SENSOR1, &sensor1_period, &sensor1_reading, &sensor1_state);
+    }
+    if(SENSOR2_MODE == FREQUENCY)
+    {
         scan_sensor_frequency(ADC1_SENSOR2, &sensor2_period, &sensor2_reading, &sensor2_state);
+    }
+    if(SENSOR3_MODE == FREQUENCY)
+    {
         scan_sensor_frequency(ADC1_SENSOR3, &sensor3_period, &sensor3_reading, &sensor3_state);
+    }
+    if(SENSOR4_MODE == FREQUENCY)
+    {
         scan_sensor_frequency(ADC1_SENSOR4, &sensor4_period, &sensor4_reading, &sensor4_state);
     }
     
     // Analog Value Scanning
-    if(SCANNING_MODE == ANALOG)
+    if(SENSOR1_MODE == ANALOG)
     {
         scan_sensor_analog(ADC1_SENSOR1, &sensor1_reading);
+    }
+    if(SENSOR2_MODE == ANALOG)
+    {
         scan_sensor_analog(ADC1_SENSOR2, &sensor2_reading);
+    }
+    if(SENSOR3_MODE == ANALOG)
+    {
         scan_sensor_analog(ADC1_SENSOR3, &sensor3_reading);
+    }
+    if(SENSOR4_MODE == ANALOG)
+    {
         scan_sensor_analog(ADC1_SENSOR4, &sensor4_reading);
     }
     
