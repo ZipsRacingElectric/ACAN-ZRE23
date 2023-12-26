@@ -7,8 +7,10 @@ extern "C" {
 
 #define FCY 40000000UL                   // Instruction Cycle Frequency - Required for <libpic30.h>
 
+// Scanning Mode definitions
 #define FREQUENCY     0                  // Scans for PWM Frequency from Channels
 #define ANALOG        1                  // Reads Analog Values from Channels
+    
 #define SENSOR1_MODE ANALOG           // Sensor-1 Scanning Mode (Select from options above)
 #define SENSOR2_MODE ANALOG           // Sensor-2 Scanning Mode
 #define SENSOR3_MODE ANALOG           // Sensor-3 Scanning Mode

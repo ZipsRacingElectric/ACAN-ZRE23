@@ -66,9 +66,9 @@
         <targetDevice>dsPIC33EV256GM106</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>1.70</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -141,9 +141,6 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
-      <C30-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C30-AR>
       <C30-AS>
         <property key="assembler-symbols" value=""/>
         <property key="expand-macros" value="false"/>
@@ -387,6 +384,11 @@
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="true"/>
       </PKOBSKDEPlatformTool>
+      <Tool>
+        <property key="memories.programmemory.ranges" value="0-2ab7f"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/Cole/Zips Racing Electric/Gitlab/ACAN23/ACAN.X/debug/default/ACAN_ptg"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>
