@@ -35,7 +35,7 @@ The ACAN PCB can be used for 4 generic analog inputs provided they are compatibl
 
 # Functional Description
 
-The `main()` function initializes the CANbus, ADC, and timer peripherals. The current version of the firmware uses the MCC generated HAL libraries.
+The `main()` function initializes the CANbus, ADC, and timer peripherals. The current version of the firmware uses the MCC generated HAL libraries. The HAL library is project specific and its functionality can either be modified with MCC or by editing the files under `Source Files / MCC Generated Files/`
 
 If all perihperals have been successfully initialized, a heartbeat LED is blinked at a 100ms rate in the main loop. All ADC and CANbus messaging gets handled in the hardware interrupt service routine.
 
@@ -46,6 +46,10 @@ The timer is a non-blocking interrupt-based Timer1 peripheral witht the followin
 ### ADC
 
 The ADC peripheral is initalized with the following configuration:
+
+TODO
+
+The ADC Sampling frequency can be easilly adjusted by changing the global constant ``
 
 ### CANbus
 
@@ -62,7 +66,8 @@ The ISR starts by:
    
 3. Reading ANALOG-selected inputs for voltage value with the `scan_sensor_analog(ADC1_CHANNEL channel, uint16_t* reading)` function
    
-4. Sending a CAN message. The CANbus LED is toggled.
+4. Sending a CAN message with the `CAN1_transmit(CAN_TX_PRIOIRTY priority, uCAN_MSG *sendCanMsg)`. The CANbus LED is toggled.
+   1. This function is an MCC-generated HAL library function declared in can1.c
 
 # Firmware Configuration
 
@@ -72,12 +77,16 @@ The ACAN firmware has a number of options that must be configured for each devic
 
 The scanning mode determines the how signal is being read on from the input channels. This setting can be changed in the global_constants.h header file. Each of the four sensor inputs can be changed individually.
 
+- **OFF** - The sensor input is disabled, and not sent on the CANbus. (unimplemented, for future ACAN design)
+
 - **ANALOG** - Values are read directly by the ADC. (0V => 0ADC, 5V => 1024ADC)
+
 - **FREQUENCY** - Values are read as a PWM signal. The output signal is given in Hertz.
   
 ## CAN Message
 
-The CAN message gives the output of each channel. 4 16-bit unsigned integers are used in packed in the message.
+The CAN message gives the output of each channel. 4 16-bit unsigned integers are used in packed in the message. The data is sent little endian, meaning that the LO byte is sent first.
+
 - Byte 0 - Channel 1 Reading LO Byte
 - Byte 1 - Channel 1 Reading HI Byte
 - Byte 2 - Channel 2 Reading LO Byte
@@ -87,4 +96,4 @@ The CAN message gives the output of each channel. 4 16-bit unsigned integers are
 - Byte 6 - Channel 4 Reading LO Byte
 - Byte 7 - Channel 4 Reading HI Byte
 
-The ID of the CAN message indicates the contents and interpretation of the message. The ID is configured in the global_constants.h header.
+The ID of the CAN message indicates the contents and interpretation of the message. The ID is configured in the global_constants.h header. The default CAN ID for the ACAN PCB is `0x755`.
